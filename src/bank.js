@@ -60,7 +60,7 @@ class Bank {
 
   findAccount(accountNumber) {
     return this.accounts.find(
-      (account) => account.accountNumber === accountNumber
+      (account) => account.accountNumber === accountNumber,
     ); // strictly equal and added this.accounts
   }
 }
@@ -81,7 +81,7 @@ console.log(account2); // BankAccount { accountNumber: "002", ownerName: "Bob" }
 myBank.addAccount(account1);
 myBank.addAccount(account2);
 console.log(myBank.accounts);
-/* 
+/*
 [
   BankAccount { accountNumber: "001", ownerName: "Alice" },
   BankAccount { accountNumber: "002", ownerName: "Bob" }

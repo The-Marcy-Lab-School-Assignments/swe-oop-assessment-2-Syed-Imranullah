@@ -1,6 +1,6 @@
 class Pokemon {
   #health = 100;
-  
+
   #level = 1;
 
   static allPokemon = [];
@@ -28,9 +28,8 @@ class Pokemon {
   isFainted() {
     if (this.#health <= 0) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 
   attack(targetPokemon) {
@@ -65,24 +64,20 @@ console.log(squirtle.getLevel()); // 4
 // OR if you use the get syntax
 console.log(squirtle.level); // 4
 
-
 // 4. Checking on health
-console.log(squirtle.getHealth());   // Should be 130
+console.log(squirtle.getHealth()); // Should be 130
 // OR if you use the get syntax
-console.log(squirtle.health);   // Should be 130
-
+console.log(squirtle.health); // Should be 130
 
 // 5. Attacking until one faints: Fixed version
 while (!charizard.isFainted()) {
-  squirtle.attack(charizard);  
-} 
-console.log(charizard.isFainted()); //Should print true 
-console.log('Charizard fainted!')
-
+  squirtle.attack(charizard);
+}
+console.log(charizard.isFainted()); // Should print true
+console.log('Charizard fainted!');
 
 // 6. Finding a Pokemon instance
 console.log(Pokemon.findByName('Charizard')); // Pokemon { name: "Charizard", type: "Fire" }
-
 
 // 7. Viewing count of all Pokemon
 console.log('Total Pokemon:', Pokemon.getTotalPokemon()); // 2
